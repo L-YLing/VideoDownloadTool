@@ -1,0 +1,25 @@
+/* ===========================================================
+ * layout.css — 布局与排列工具类
+ * 控件：横向行、两端对齐行、字段容器
+ * =========================================================== */
+
+/* 横向排列（默认垂直居中 + 10px 间距） */
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 两端对齐（左信息、右操作） */
+.row-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* 表单字段容器 */
+.field {
+  margin-bottom: 14px;
+  min-width: 0;
+}

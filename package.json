@@ -1,0 +1,31 @@
+{
+  "name": "vd-dl",
+  "productName": "VD视频下载器",
+  "version": "0.1.0",
+  "description": "本地优先、跨平台的视频下载与管理工具（Video Download Tool）",
+  "main": "./out/main/index.js",
+  "author": "207研究所 <https://apart207.top/>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "start": "electron-vite preview",
+    "typecheck:node": "tsc --noEmit -p tsconfig.node.json --composite false",
+    "typecheck:web": "tsc --noEmit -p tsconfig.web.json --composite false",
+    "typecheck": "npm run typecheck:node && npm run typecheck:web",
+    "build:win": "electron-vite build && electron-builder --win",
+    "build:win:portable": "electron-vite build && electron-builder --win portable"
+  },
+  "dependencies": {
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "electron": "^37.0.0",
+    "electron-builder": "^25.1.8",
+    "electron-vite": "^3.1.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7"
+  }
+}

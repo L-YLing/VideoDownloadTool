@@ -1,0 +1,41 @@
+/* ===========================================================
+ * reset.css — 基础重置与低资源模式
+ * =========================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--md-font);
+  font-size: 14px;
+  color: var(--md-on-surface);
+  background: var(--md-surface);
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+}
+
+/* ===========================================================
+ * 低资源模式（13-性能）：关闭动画 / 过渡 / 模糊，降低 GPU 与 CPU 占用
+ * 由主题模块在 <html data-low-resource="true"> 上切换
+ * =========================================================== */
+:root[data-low-resource='true'] *,
+:root[data-low-resource='true'] *::before,
+:root[data-low-resource='true'] *::after {
+  animation-duration: 0s !important;
+  transition-duration: 0s !important;
+}
+
+:root[data-low-resource='true'] .blur,
+:root[data-low-resource='true'] [class*='backdrop'] {
+  backdrop-filter: none !important;
+  filter: none !important;
+}

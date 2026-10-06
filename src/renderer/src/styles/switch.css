@@ -1,0 +1,71 @@
+/* ===========================================================
+ * switch.css — MD3 开关（Switch）
+ * 控件：.switch 容器（内部 input + .track）
+ * =========================================================== */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 32px;
+  flex-shrink: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch .track {
+  position: absolute;
+  inset: 0;
+  background: var(--md-outline-variant);
+  border-radius: 999px;
+  transition: background 0.25s ease;
+}
+
+.switch .track::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--md-surface);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background 0.25s, box-shadow 0.2s;
+}
+
+.switch:hover .track::after {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.switch input:checked + .track {
+  background: color-mix(in srgb, var(--md-primary) 50%, var(--md-surface-container-low));
+}
+
+.switch input:checked + .track::after {
+  transform: translateX(20px);
+  background: var(--md-primary);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.switch input:focus-visible + .track {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--md-primary) 30%, transparent);
+}
+
+/* 禁用态 */
+.switch.is-disabled {
+  cursor: not-allowed;
+}
+
+.switch.is-disabled .track {
+  opacity: 0.45;
+}
+
+.switch.is-disabled .track::after {
+  box-shadow: none;
+}

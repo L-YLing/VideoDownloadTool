@@ -1,0 +1,48 @@
+/* ===========================================================
+ * navigation.css — 导航项
+ * 控件：侧栏 .tab / .nav-item / 紧凑 .tab-mini（侧栏与设置页共用）
+ * =========================================================== */
+.tab,
+.nav-item,
+.tab-mini {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: var(--md-radius-sm);
+  background: transparent;
+  color: var(--md-on-surface-variant);
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.18s, color 0.18s;
+}
+
+/* 主侧栏项更宽大 */
+.tab {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 14px;
+  border-radius: var(--md-radius-md);
+}
+
+.tab:hover,
+.nav-item:hover,
+.tab-mini:hover {
+  background: var(--md-surface-container-low);
+  color: var(--md-on-surface);
+}
+
+.tab.active,
+.nav-item.active,
+.tab-mini.active {
+  background: var(--md-primary-container);
+  color: var(--md-on-primary-container);
+  font-weight: 600;
+}
+
+.tab-mini {
+  flex: 0 0 auto;
+}

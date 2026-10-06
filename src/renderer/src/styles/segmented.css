@@ -1,0 +1,56 @@
+/* ===========================================================
+ * segmented.css — MD3 分段按钮（Segmented Button，全局唯一实现）
+ * 控件：.seg 容器 + .seg-btn 选项；.seg.seg-sm 为紧凑型
+ * =========================================================== */
+.seg {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: var(--md-surface-container-highest);
+  border-radius: 999px;
+  padding: 3px;
+  gap: 2px;
+}
+
+.seg-btn {
+  border: none;
+  background: transparent;
+  height: calc(var(--md-control-h) - 8px);
+  padding: 0 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: inherit;
+  color: var(--md-on-surface-variant);
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.seg-btn:hover {
+  color: var(--md-on-surface);
+}
+
+.seg-btn.active {
+  background: var(--md-primary);
+  color: var(--md-on-primary);
+  font-weight: 600;
+  box-shadow: var(--md-elevation-1);
+}
+
+.seg-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* 紧凑型（播放器 / 侧栏小页签复用） */
+.seg.seg-sm {
+  border-radius: 16px;
+  padding: 2px;
+}
+
+.seg.seg-sm .seg-btn {
+  height: var(--md-control-h-sm);
+  padding: 0 12px;
+  font-size: 12px;
+  border-radius: 14px;
+}

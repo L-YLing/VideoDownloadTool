@@ -1,0 +1,23 @@
+/* ===========================================================
+ * index.css — 样式总入口
+ *
+ * 本目录把原先单文件 base.css 拆分为按职责划分的模块，
+ * 每个文件只负责一类控件；使用方式见 docs/styles/*.md。
+ *
+ * 引入顺序：令牌 → 重置 → 文字 → 布局 → 容器 → 控件 → 反馈 → 动画
+ * （@import 必须位于文件顶部；Vite 会在构建期合并）
+ * =========================================================== */
+@import './tokens.css';
+@import './reset.css';
+@import './typography.css';
+@import './layout.css';
+@import './surfaces.css';
+@import './buttons.css';
+@import './forms.css';
+@import './segmented.css';
+@import './switch.css';
+@import './badges.css';
+@import './navigation.css';
+@import './feedback.css';
+@import './icons.css';
+@import './animations.css';

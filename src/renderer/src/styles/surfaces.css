@@ -1,0 +1,48 @@
+/* ===========================================================
+ * surfaces.css — 容器与列表
+ * 控件：卡片、可悬浮卡片、列表项、空状态
+ * =========================================================== */
+
+/* 基础卡片 */
+.card {
+  background: var(--md-surface-container);
+  border-radius: var(--md-radius-md);
+  box-shadow: var(--md-elevation-1);
+  padding: 16px;
+}
+
+/* 可悬浮卡片（悬停轻微上浮 + 加深阴影） */
+.card-hover {
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card-hover:hover {
+  box-shadow: var(--md-elevation-2);
+  transform: translateY(-1px);
+}
+
+/* 通用列表项（悬停底色变化） */
+.list-item {
+  transition: background 0.18s, transform 0.15s, box-shadow 0.18s;
+}
+
+.list-item:hover {
+  background: var(--md-surface-container-low);
+}
+
+/* 空状态 */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 48px 20px;
+  color: var(--md-on-surface-variant);
+  font-size: 13px;
+}
+
+.empty .empty-icon {
+  font-size: 40px;
+  opacity: 0.4;
+}

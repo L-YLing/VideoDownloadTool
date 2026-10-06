@@ -1,0 +1,74 @@
+/* ===========================================================
+ * typography.css — 文本层级
+ * 控件：区块标题 / 副标题 / 说明文字 / 字段标签 / 等宽文本
+ * =========================================================== */
+
+/* 各页区块标题统一（.section-title 与 .sec-title 为同一语义的不同写法） */
+.section-title,
+.sec-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* 卡片内的小标题 */
+.card > .sec-title {
+  margin-bottom: 12px;
+}
+
+/* 更小一级的分组标题 */
+.sec-sub {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* 说明 / 提示文字 */
+.hint {
+  font-size: 12px;
+  color: var(--md-on-surface-variant);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* 表单字段标签 */
+.label {
+  font-size: 12px;
+  color: var(--md-on-surface-variant);
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* 开关 / 复选项后的说明文字 */
+.opt-label {
+  font-size: 13px;
+  color: var(--md-on-surface-variant);
+}
+
+/* 等宽文本（路径 / 尺寸 / 时长 / 编码名） */
+.mono {
+  font-family: var(--md-font-mono);
+  font-size: 12px;
+}
+
+/* 主题色链接 */
+.link {
+  color: var(--md-primary);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* ===========================================================
+ * 可选中复制
+ * body 默认 user-select: none（避免拖拽选中一片界面文字），
+ * 但对「BV 号 / 标题 / UP 主 / 评论」这类需要复制的内容单独放开。
+ * =========================================================== */
+.selectable,
+.selectable * {
+  user-select: text;
+  cursor: text;
+}

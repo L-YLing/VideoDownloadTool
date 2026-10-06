@@ -1,0 +1,84 @@
+/* ===========================================================
+ * animations.css — 关键帧与入场动画
+ * 说明：所有 @keyframes 集中于此，低资源模式会统一把动画时长置 0
+ * =========================================================== */
+
+/* 弹窗入场 */
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* 淡入（遮罩） */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 轻提示入场 */
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 视图切换淡入（.view-enter） */
+.view-enter {
+  animation: view-fade-in 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes view-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 任务行入场（逐条淡入上移） */
+@keyframes task-row-in {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 状态徽标脉冲（下载中） */
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+/* 旋转加载 */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

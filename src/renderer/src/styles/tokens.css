@@ -1,0 +1,75 @@
+/* ===========================================================
+ * tokens.css — 设计令牌（Design Tokens）
+ * 单一变量来源：所有视图 / 组件共用同一套 Material3 令牌，
+ * 避免各页自成一套颜色、圆角与控件尺寸。
+ * 主题切换：<html data-theme="dark"> 时覆盖同名变量。
+ * =========================================================== */
+:root {
+  /* ---- 颜色：主色 / 次要色 ---- */
+  --md-primary: #64b5f6;
+  --md-on-primary: #ffffff;
+  --md-primary-container: #d3e9ff;
+  --md-on-primary-container: #0d3d6b;
+  --md-secondary-container: #dce8f5;
+  --md-on-secondary-container: #0d3d6b;
+
+  /* ---- 颜色：表面层级（surface 越高越"浮起"） ---- */
+  --md-surface: #f4f7fb;
+  --md-surface-container: #ffffff;
+  --md-surface-container-low: #eef2f8;
+  --md-surface-container-high: #e6edf6;
+  --md-surface-container-highest: #dfe6f0;
+
+  /* ---- 颜色：文字 / 描边 ---- */
+  --md-on-surface: #1b1b1f;
+  --md-on-surface-variant: #44474e;
+  --md-outline: #74777f;
+  --md-outline-variant: #c4c7d0;
+
+  /* ---- 颜色：语义状态 ---- */
+  --md-error: #ba1a1a;
+  --md-on-error: #ffffff;
+  --md-success: #2e7d32;
+  --md-warning: #b26a00;
+
+  /* ---- 阴影 ---- */
+  --md-shadow: rgba(0, 0, 0, 0.12);
+  --md-elevation-1: 0 1px 2px var(--md-shadow);
+  --md-elevation-2: 0 2px 6px var(--md-shadow);
+
+  /* ---- 圆角 ---- */
+  --md-radius-xs: 6px;
+  --md-radius-sm: 8px;
+  --md-radius-md: 12px;
+  --md-radius-lg: 16px;
+
+  /* ---- 字体 ---- */
+  --md-font: "Segoe UI", "Microsoft YaHei UI", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+  --md-font-mono: Consolas, "Cascadia Mono", "Courier New", monospace;
+
+  /* ---- 控件尺寸（按钮 / 输入框 / 下拉 / 分段按钮保持一致） ---- */
+  --md-control-h: 36px;
+  --md-control-h-sm: 28px;
+}
+
+/* ---- 暗色主题 ---- */
+:root[data-theme='dark'] {
+  --md-surface: #141414;
+  --md-surface-container: #1e1e1e;
+  --md-surface-container-low: #191919;
+  --md-surface-container-high: #232323;
+  --md-surface-container-highest: #2a2a2a;
+  --md-on-surface: #e4e2e6;
+  --md-on-surface-variant: #c7c5cb;
+  --md-outline: #8f9099;
+  --md-outline-variant: #45464f;
+  --md-error: #ffb4ab;
+  --md-on-error: #690005;
+  --md-success: #81c995;
+  --md-warning: #f7c667;
+  --md-shadow: rgba(0, 0, 0, 0.4);
+  --md-primary-container: #234a6d;
+  --md-on-primary-container: #d3e9ff;
+  --md-secondary-container: #2a3b4d;
+  --md-on-secondary-container: #d3e9ff;
+}

@@ -1,0 +1,25 @@
+# 依赖与构建产物
+node_modules/
+out/
+dist/
+release/
+*.log
+
+# 打包中间产物
+*.blockmap
+builder-debug.yml
+builder-effective-config.yaml
+
+# 内部规划 / 规格文档 / AI工具
+.trae/
+
+# 授权/试用校验模块的写入痕迹
+.lic_*
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

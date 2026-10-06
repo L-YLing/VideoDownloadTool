@@ -1,0 +1,76 @@
+/* ===========================================================
+ * badges.css — 徽标 / 状态标记 / 进度条
+ * 控件：.chip（及 .ok/.warn/.err 语义变体）、.st-*（任务状态）、.progress
+ * =========================================================== */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  background: var(--md-secondary-container);
+  color: var(--md-on-secondary-container);
+  white-space: nowrap;
+}
+
+.chip.ok {
+  background: color-mix(in srgb, var(--md-success) 18%, transparent);
+  color: var(--md-success);
+}
+
+.chip.warn {
+  background: color-mix(in srgb, var(--md-warning) 18%, transparent);
+  color: var(--md-warning);
+}
+
+.chip.err {
+  background: color-mix(in srgb, var(--md-error) 18%, transparent);
+  color: var(--md-error);
+}
+
+/* 任务 / 历史状态徽标 */
+.st-completed {
+  background: color-mix(in srgb, var(--md-success) 18%, transparent);
+  color: var(--md-success);
+}
+
+.st-failed {
+  background: color-mix(in srgb, var(--md-error) 18%, transparent);
+  color: var(--md-error);
+}
+
+.st-paused {
+  background: color-mix(in srgb, var(--md-warning) 18%, transparent);
+  color: var(--md-warning);
+}
+
+.st-downloading,
+.st-merging,
+.st-resolving,
+.st-distributing {
+  background: color-mix(in srgb, var(--md-primary) 18%, transparent);
+  color: var(--md-primary);
+  animation: pulse-dot 1.4s ease-in-out infinite;
+}
+
+/* 进度条容器 */
+.progress {
+  height: 6px;
+  border-radius: 3px;
+  background: var(--md-secondary-container);
+  overflow: hidden;
+  flex: 1;
+}
+
+.progress .bar {
+  height: 100%;
+  border-radius: 3px;
+  background: var(--md-primary);
+  transition: width 0.3s;
+}
+
+/* 运行中状态圆点脉冲 */
+.state-dot.running {
+  animation: pulse-dot 1.2s ease-in-out infinite;
+}
