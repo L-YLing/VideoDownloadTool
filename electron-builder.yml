@@ -10,8 +10,8 @@ files:
   - '!{.eslintignore,.eslintrc.cjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}'
   - '!{.env,.env.*,.npmrc,pnpm-lock.yaml}'
   - '!{tsconfig.json,tsconfig.node.json,tsconfig.web.json}'
-  # ---- 隐私与整洁：以下内容绝不打进安装包 ----
-  # 内部规划/规格文档（含本机绝对路径、开发备注）
+  # ---- 隐私/整洁 ----
+  # 内部规划/规格文档
   - '!.trae/**'
   - '!**/.trae/**'
   # 仓库内的 Markdown / 说明文档
@@ -19,11 +19,11 @@ files:
   - '!**/*.md'
   # 开发脚本与图标生成工具
   - '!scripts/**'
-  # 构建中间产物 / 打包调试文件（含本机绝对路径）
+  # 构建中间产物 / 打包调试文件
   - '!*.blockmap'
   - '!builder-debug.yml'
   - '!builder-effective-config.yaml'
-  # 授权/试用模块的旧残留（历史上被模板带进来过）
+  # 授权/试用模块的旧残留
   - '!**/license-module.js'
   - '!out/main.js'
   - '!out/preload.js'
